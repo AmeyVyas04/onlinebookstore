@@ -23,7 +23,7 @@ function Signup() {
       password: data.password,
     };
     try {
-      const res = await axios.post("http://localhost:4001/user/signup", userInfo);
+      const res = await axios.post("https://onlinebookstore-4vl3.onrender.com/user/signup", userInfo);
       if (res.data) {
         toast.success("Signup Successfully");
         localStorage.setItem("Users", JSON.stringify(res.data.user));
