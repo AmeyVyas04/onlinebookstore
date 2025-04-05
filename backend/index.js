@@ -8,7 +8,10 @@ import userRoute from "./route/user.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://onlinebookstore-green.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 dotenv.config();
